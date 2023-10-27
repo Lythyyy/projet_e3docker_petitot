@@ -1,0 +1,17 @@
+.git
+pycache
+*.pyc
+*.pyo
+*.pyd
+.gitignore
+*.egg-info/
+dist/
+*.egg
+*.log
+*.sql
+*.db
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store

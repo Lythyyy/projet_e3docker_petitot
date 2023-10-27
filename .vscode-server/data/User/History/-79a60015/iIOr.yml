@@ -1,0 +1,64 @@
+version: '3.8'
+services:
+  flask-adminlte-master:
+    restart: always
+    build: './flask-adminlte-master'
+    env_file: './flask-adminlte-master/.env'
+    deploy:
+      replicas: 5
+    networks:
+      - web_network
+      - back_network
+  flask-atlantis-dark-master:
+    restart: always
+    build: './flask-atlantis-dark-master'
+    env_file: './flask-atlantis-dark-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-azia-dashboard-master:
+    restart: always
+    build: './flask-azia-dashboard-master'
+    env_file: './flask-azia-dashboard-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-datta-able-master:
+    restart: always
+    build: './flask-datta-able-master'
+    env_file: './flask-datta-able-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-gradient-able-master:
+    restart: always
+    build: './flask-gradient-able-master'
+    env_file: './flask-gradient-able-master/.env'
+    ports:
+      - "5085:5005"
+    networks:
+      - back_network
+      - web_network
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:1.22.1-alpine-slim"
+    ports:
+      - "80:6001"
+      - "7000:6002"
+      - "8000:6003"
+      - "9000:6004"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - flask-adminlte-master
+      - flask-atlantis-dark-master
+      - flask-azia-dashboard-master
+      - flask-datta-able-master
+networks:
+  web_network:
+    driver: bridge
+  back_network:
+    driver: bridge

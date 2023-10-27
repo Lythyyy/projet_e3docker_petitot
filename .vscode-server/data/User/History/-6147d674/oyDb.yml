@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  argon:
+    container_name: argon
+    restart: always
+    env_file: './flask-argon-dashboard-master/.env'
+    build: './flask-argon-dashboard-master'
+    networks:
+      - db_network
+  black:
+    container_name: black
+    restart: always
+    env_file: './flask-black-dashboard-master/.env'
+    build: './flask-black-dashboard-master'
+    networks:
+      - db_network
+  star:
+    container_name: star
+    restart: always
+    env_file: './flask-star-admin-master/.env'
+    build: './flask-star-admin-master'
+    networks:
+      - web_network
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:1.22.1-alpine-slim"
+    ports:
+      - "80:80"
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - argon
+      - black
+      - star
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge

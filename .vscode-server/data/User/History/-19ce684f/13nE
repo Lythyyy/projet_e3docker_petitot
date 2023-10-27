@@ -1,0 +1,13 @@
+# Utiliser une image Nginx comme base
+FROM nginx:latest
+
+# Supprimer le fichier de configuration par défaut de Nginx
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copier les fichiers HTML et les ressources statiques vers le répertoire de travail de Nginx
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+
+# Commande pour démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]

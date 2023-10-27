@@ -1,0 +1,23 @@
+FROM python:3.9.18-alpine
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1 \
+&& PYTHONUNBUFFERED 1 \
+&& SERVER_ADDRESS http://192.168.1.30:5086/
+
+# Stripe Secrets 
+# ENV STRIPE_SECRET_KEY      <YOUR_STRIPE_SECRET_KEY>
+# ENV STRIPE_PUBLISHABLE_KEY <YOUR_STRIPE_PUBLISHABLE_KEY>
+
+COPY requirements.txt .
+
+# install python dependencies
+RUN pip install --upgrade pip \
+&& pip install --no-cache-dir -r requirements.txt
+
+COPY env.sample .env
+
+COPY . .
+
+# gunicorn
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]

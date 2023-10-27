@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+  flask-adminlte-master:
+    restart: always
+    build: './flask-adminlte-master'
+    env_file: './flask-adminlte-master/.env'
+    networks:
+      - web_network
+      - back_network
+  flask-atlantis-dark-master:
+    restart: always
+    build: './flask-atlantis-dark-master'
+    env_file: './flask-atlantis-dark-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-azia-dashboard-master:
+    restart: always
+    build: './flask-azia-dashboard-master'
+    env_file: './flask-azia-dashboard-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-datta-able-master:
+    restart: always
+    build: './flask-datta-able-master'
+    env_file: './flask-datta-able-master/.env'
+    networks:
+      - back_network
+      - web_network
+  flask-gradient-able-master:
+    restart: always
+    build: './flask-gradient-able-master'
+    env_file: './flask-gradient-able-master/.env'
+    networks:
+      - back_network
+      - web_network
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:1.22.1-alpine-slim"
+    ports:
+      - "80:80"
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - appseed-app
+networks:
+  web_network:
+    driver: bridge
+  back_network:
+    driver: bridge

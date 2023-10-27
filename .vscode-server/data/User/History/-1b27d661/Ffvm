@@ -1,0 +1,16 @@
+FROM python:3.9.18-alpine
+
+ENV PYTHONDONTWRITEBYTECODE 1 \
+&& PYTHONUNBUFFERED 1 \
+&& SERVER_ADDRESS http://192.168.1.30:5085/
+
+COPY requirements.txt .
+
+RUN pip install --upgrade pip \
+&& pip install --no-cache-dir -r requirements.txt
+
+COPY env.sample .env
+
+COPY . .
+
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]

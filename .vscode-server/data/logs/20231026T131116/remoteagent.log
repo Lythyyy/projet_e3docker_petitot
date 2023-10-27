@@ -1,0 +1,22 @@
+2023-10-26 13:11:16.791 [info] 
+
+
+
+
+2023-10-26 13:11:16.804 [info] Extension host agent started.
+2023-10-26 13:11:16.850 [info] [127.0.0.1][358daa16][ManagementConnection] New connection established.
+2023-10-26 13:11:16.855 [info] [127.0.0.1][92512626][ExtensionHostConnection] New connection established.
+2023-10-26 13:11:16.937 [info] [127.0.0.1][92512626][ExtensionHostConnection] <2556> Launched Extension Host Process.
+2023-10-26 13:16:16.805 [info] New EH opened, aborting shutdown
+2023-10-26 14:53:59.433 [error] AggregateError
+    at internalConnectMultiple (node:net:1081:18)
+    at afterConnectMultiple (node:net:1532:5)
+2023-10-26 14:53:59.702 [error] AggregateError
+    at internalConnectMultiple (node:net:1081:18)
+    at afterConnectMultiple (node:net:1532:5)
+2023-10-26 15:21:00.230 [error] AggregateError
+    at internalConnectMultiple (node:net:1081:18)
+    at afterConnectMultiple (node:net:1532:5)
+2023-10-26 15:21:00.477 [error] AggregateError
+    at internalConnectMultiple (node:net:1081:18)
+    at afterConnectMultiple (node:net:1532:5)

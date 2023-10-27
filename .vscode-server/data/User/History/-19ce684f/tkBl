@@ -1,0 +1,7 @@
+# Utiliser une image Alpine de Nginx comme base
+FROM nginx:alpine
+
+COPY . /usr/share/nginx/html
+
+# Commande pour démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]

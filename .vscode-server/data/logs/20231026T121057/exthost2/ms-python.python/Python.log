@@ -1,0 +1,63 @@
+2023-10-26 12:11:32.583 [info] Experiment 'pythonPromptNewFormatterExt' is active
+2023-10-26 12:11:32.583 [info] Experiment 'pythonPromptNewToolsExt' is active
+2023-10-26 12:11:32.583 [info] Experiment 'pythonSurveyNotification' is active
+2023-10-26 12:11:32.583 [info] Experiment 'pythonTerminalEnvVarActivationcf' is active
+2023-10-26 12:11:32.583 [info] Experiment 'pythonTestAdapter' is active
+2023-10-26 12:11:33.009 [info] Test server listening.
+2023-10-26 12:11:33.009 [info] Python interpreter path: /bin/python3
+2023-10-26 12:11:34.546 [info] Starting Pylance language server.
+2023-10-26 12:14:39.440 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-argon-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:15:57.584 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-star-admin-master/gunicorn-cfg.py
+2023-10-26 12:16:34.555 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-black-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:16:38.326 [info] Running installed packages checker:  python /home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py /home/olivier/test1/flask-black-dashboard-master/requirements.txt
+2023-10-26 12:16:38.328 [error] Error while getting installed packages check result:
+ [Error: spawn python ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:283:19)
+	at onErrorNT (node:internal/child_process:476:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn python',
+  path: 'python',
+  spawnargs: [
+    '/home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py',
+    '/home/olivier/test1/flask-black-dashboard-master/requirements.txt'
+  ]
+}
+2023-10-26 12:17:04.099 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-black-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:19:02.307 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-star-admin-master/gunicorn-cfg.py
+2023-10-26 12:19:09.803 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-black-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:19:21.981 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-argon-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:41:19.411 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-argon-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:41:34.149 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-black-dashboard-master/gunicorn-cfg.py
+2023-10-26 12:41:42.357 [info] Discover tests for workspace name: olivier - uri: /home/olivier/test1/flask-star-admin-master/gunicorn-cfg.py
+2023-10-26 12:45:54.412 [info] Running installed packages checker:  python /home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py /home/olivier/test1/flask-star-admin-master/requirements.txt
+2023-10-26 12:45:54.414 [error] Error while getting installed packages check result:
+ [Error: spawn python ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:283:19)
+	at onErrorNT (node:internal/child_process:476:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn python',
+  path: 'python',
+  spawnargs: [
+    '/home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py',
+    '/home/olivier/test1/flask-star-admin-master/requirements.txt'
+  ]
+}
+2023-10-26 13:04:20.981 [info] Running installed packages checker:  python /home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py /home/olivier/test1/flask-star-admin-master/requirements.txt
+2023-10-26 13:04:20.982 [error] Error while getting installed packages check result:
+ [Error: spawn python ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:283:19)
+	at onErrorNT (node:internal/child_process:476:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn python',
+  path: 'python',
+  spawnargs: [
+    '/home/olivier/.vscode-server/extensions/ms-python.python-2023.18.0/pythonFiles/installed_check.py',
+    '/home/olivier/test1/flask-star-admin-master/requirements.txt'
+  ]
+}

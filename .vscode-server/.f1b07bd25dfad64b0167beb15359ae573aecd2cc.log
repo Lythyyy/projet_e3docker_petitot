@@ -1,0 +1,30 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:35533 (IPv4)
+Extension host agent listening on 35533
+
+[07:35:55] 
+
+
+
+
+[07:35:55] Extension host agent started.
+[07:35:55] [127.0.0.1][703722e8][ManagementConnection] New connection established.
+[07:35:55] [127.0.0.1][53c5056b][ExtensionHostConnection] New connection established.
+[07:35:55] [127.0.0.1][53c5056b][ExtensionHostConnection] <2957> Launched Extension Host Process.
+[07:35:58] Getting Manifest... ms-python.vscode-pylance
+[07:35:58] Installing extension: ms-python.vscode-pylance
+[07:35:59] Getting Manifest... ms-python.python
+[07:35:59] Extension signature verification failed with error 'ENOENT': ms-python.vscode-pylance
+[07:36:04] Extracted extension to file:///home/olivier/.vscode-server/extensions/ms-python.vscode-pylance-2023.10.50: ms-python.vscode-pylance
+[07:36:04] Renamed to /home/olivier/.vscode-server/extensions/ms-python.vscode-pylance-2023.10.50
+[07:36:04] Extracting extension completed. ms-python.vscode-pylance
+[07:36:04] Extension installed successfully: ms-python.vscode-pylance
+[07:36:04] Marked extension as uninstalled ms-python.vscode-pylance-2023.10.40
+New EH opened, aborting shutdown
+[07:40:55] New EH opened, aborting shutdown
